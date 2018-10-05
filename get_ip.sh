@@ -15,5 +15,5 @@ curl http://members.3322.org/dyndns/getip > $ip_now
 
 if [ $? != 0 ];then
 cat $ip_now > $ip_old
-echo "IP has changed,new ip is$(cat $ip_now) !!!" | curl "https://sc.ftqq.com/SCUKEY.send?text=$(cat $ip_now)"
+echo "IP has changed,new ip is$(cat $ip_now) !!!" | curl "https://sc.ftqq.co/$SCUKEY.send?text=$(cat $ip_now)"
 fi
